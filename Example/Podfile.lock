@@ -1,0 +1,23 @@
+PODS:
+  - KProgressHUD (0.1.0):
+    - SnapKit (~> 4.2.0)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - KProgressHUD (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  KProgressHUD:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KProgressHUD: c3dec51308a545e11ee01a1f99a36dd90929094b
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 1cbbde89b574da6eec38eb9637e197c1124fafdd
+
+COCOAPODS: 1.6.0

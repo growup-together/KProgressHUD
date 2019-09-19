@@ -1,11 +1,11 @@
 use_frameworks!
 
 target 'KProgressHUD_Example' do
+  platform :ios, '9.0'
   pod 'KProgressHUD', :path => '../'
 
   target 'KProgressHUD_Tests' do
     inherit! :search_paths
 
-    
   end
 end
