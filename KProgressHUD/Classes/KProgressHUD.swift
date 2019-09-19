@@ -389,9 +389,13 @@ open class KProgressHUD: UIView {
         subviews.enumerated().forEach { (index, view) in
             view.snp.remakeConstraints { (make) in
                 make.centerX.equalToSuperview()
-                make.left.equalTo(margin)
-                make.right.equalTo(-margin)
-
+                make.left.equalToSuperview().offset(margin)
+                make.right.equalToSuperview().offset(-margin)
+                
+                if view == customView {
+                    make.width.equalTo(view.bounds.width)
+                }
+                
                 if index == 0 {
                     make.top.equalTo(topSpacer.snp.bottom)
                     if subviews.count == 1 {
@@ -400,7 +404,7 @@ open class KProgressHUD: UIView {
                 } else if index == subviews.count - 1 {
                     make.top.equalTo(subviews[index - 1].snp.bottom).offset(KDefaultPadding)
                     make.bottom.equalTo(bottomSpacer.snp.top)
-
+                    
                 } else {
                     make.top.equalTo(subviews[index - 1].snp.bottom).offset(KDefaultPadding)
                 }

@@ -9,6 +9,14 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+[![](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/1-small.png)](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/1.png)
+[![](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/2-small.png)](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/2.png)
+[![](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/3-small.png)](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/3.png)
+[![](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/4-small.png)](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/4.png)
+[![](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/5-small.png)](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/5.png)
+[![](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/6-small.png)](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/6.png)
+[![](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/7-small.png)](https://raw.githubusercontent.com/wiki/matej/MBProgressHUD/Screenshots/7.png)
+
 ## Requirements
 
 ## Installation
