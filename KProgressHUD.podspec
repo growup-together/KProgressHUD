@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
     s.frameworks            = 'QuartzCore', 'CoreGraphics'
     s.source_files          = 'KProgressHUD/Classes/**/*.swift'
 
-    s.dependency 'SnapKit', "~> 4.2.0"
+    s.dependency 'SnapKit', '~> 4.2.0'
 end
