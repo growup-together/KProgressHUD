@@ -1,5 +1,5 @@
 PODS:
-  - KProgressHUD (0.1.0):
+  - KProgressHUD (0.1.1):
     - SnapKit (~> 4.2.0)
   - SnapKit (4.2.0)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KProgressHUD: c3dec51308a545e11ee01a1f99a36dd90929094b
+  KProgressHUD: 1c9b528827dc56874d3eb4d13f591a1ec2cd0ade
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
 PODFILE CHECKSUM: dbcc4df2ea1a55d20ab9912e14bba1f31a6e125e

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                  = "KProgressHUD"
-    s.version               = "0.1.1"
+    s.version               = "1.0.0"
     s.summary               = "An iOS activity indicator view."
     s.description  = <<-EOS
                         KProgressHUD is a framework that rewrite the [MBProgressHUD](https://github.com/jdg/MBProgressHUD) in Swift.
