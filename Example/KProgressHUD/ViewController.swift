@@ -265,7 +265,7 @@ extension ViewController {
         
         let hud = KProgressHUD.showAdded(to: rootView, animated: true)
         hud.mode = .text
-        hud.titleLabel.text = "在各种沟通场合发现：行业专家在了解了我们“灵感库”在做的是什么后，对于这个名称都说不好或者感到奇怪，原因是“灵感库”会让他们浮想联翩，觉得里面会有很多教学活动的灵感，但是其实我们只提供了发布给家长的各种内容参考模板，他们觉得内容和名称很对应不上。"
+        hud.titleLabel.text = "在各种沟通场合"
         hud.bezelVectorialMargin = 16
         let width = view.bounds.width * (1.0 / 3.0)
         hud.bezelHorizontalMargin = width / 2

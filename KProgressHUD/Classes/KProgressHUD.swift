@@ -85,20 +85,11 @@ open class KProgressHUD: UIView {
     public var offset: CGPoint = CGPoint(x: 0, y: 0) { didSet { setNeedsUpdateConstraints() } }
     
     /**
-     * The vectorial margin.
      * The amount of space between the HUD edge and the HUD elements (labels, indicators or custom views).
      * This also represents the minimum bezel distance to the edge of the HUD view.
      * Defaults to 20.f
      */
-    public var vectorialMargin: CGFloat = 20 { didSet { setNeedsUpdateConstraints() } }
-
-    /**
-     * The horizontal margin.
-     * The amount of space between the HUD edge and the HUD elements (labels, indicators or custom views).
-     * This also represents the minimum bezel distance to the edge of the HUD view.
-     * Defaults to 20.f
-     */
-    public var horizontalMargin: CGFloat = 20 { didSet { setNeedsUpdateConstraints() } }
+    public var margin: CGFloat = 20 { didSet { setNeedsUpdateConstraints() } }
     
     /**
      *  The top and bottom margin of bezelView.
@@ -352,15 +343,15 @@ open class KProgressHUD: UIView {
             make.centerY.equalToSuperview().offset(offset.y)
             make.width.greaterThanOrEqualTo(minSize.width)
             make.height.greaterThanOrEqualTo(minSize.height)
-            make.top.greaterThanOrEqualTo(vectorialMargin)
-            make.bottom.lessThanOrEqualTo(-vectorialMargin)
+            make.top.greaterThanOrEqualTo(margin)
+            make.bottom.lessThanOrEqualTo(-margin)
             
             if let horizontalMargin = bezelHorizontalMargin {
-                make.left.equalToSuperview().offset(horizontalMargin)
-                make.right.equalToSuperview().offset(-horizontalMargin)
+                make.left.greaterThanOrEqualToSuperview().offset(horizontalMargin)
+                make.right.lessThanOrEqualToSuperview().offset(-horizontalMargin)
             } else {
-                make.left.greaterThanOrEqualTo(horizontalMargin)
-                make.right.lessThanOrEqualTo(-horizontalMargin)
+                make.left.greaterThanOrEqualTo(margin)
+                make.right.lessThanOrEqualTo(-margin)
             }
         }
         
@@ -368,7 +359,7 @@ open class KProgressHUD: UIView {
             if let vectorialMargin = bezelVectorialMargin {
                 make.height.equalTo(vectorialMargin)
             } else {
-                make.height.equalTo(vectorialMargin)
+                make.height.equalTo(margin)
             }
             make.top.left.right.equalToSuperview()
         }
@@ -398,8 +389,8 @@ open class KProgressHUD: UIView {
         subviews.enumerated().forEach { (index, view) in
             view.snp.remakeConstraints { (make) in
                 make.centerX.equalToSuperview()
-                make.left.greaterThanOrEqualTo(horizontalMargin)
-                make.right.lessThanOrEqualTo(-horizontalMargin)
+                make.left.equalTo(margin)
+                make.right.equalTo(-margin)
 
                 if index == 0 {
                     make.top.equalTo(topSpacer.snp.bottom)
