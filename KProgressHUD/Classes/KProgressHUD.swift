@@ -389,8 +389,8 @@ open class KProgressHUD: UIView {
         subviews.enumerated().forEach { (index, view) in
             view.snp.remakeConstraints { (make) in
                 make.centerX.equalToSuperview()
-                make.left.equalToSuperview().offset(margin)
-                make.right.equalToSuperview().offset(-margin)
+                make.left.greaterThanOrEqualToSuperview().offset(margin)
+                make.right.lessThanOrEqualToSuperview().offset(-margin)
                 
                 if view == customView {
                     make.width.equalTo(view.bounds.width)
@@ -435,13 +435,9 @@ open class KProgressHUD: UIView {
     func updateIndicators() {
         var indicator = self.indicator
         indicator?.removeFromSuperview()
-        
-        let isActivityIndicator = indicator is UIActivityIndicatorView
-        let isRoundIndicator = indicator is HUDRoundProgressView
-        
+
         switch mode {
         case .indeterminate:
-            guard !isActivityIndicator else { return }
             let indicatorView = UIActivityIndicatorView(style: .whiteLarge)
             indicatorView.startAnimating()
             bezelView.addSubview(indicatorView)
@@ -453,11 +449,9 @@ open class KProgressHUD: UIView {
             indicator = progressView
             
         case .determinate, .annularDeterminate:
-            if !isRoundIndicator {
-                let progressView = HUDRoundProgressView()
-                bezelView.addSubview(progressView)
-                indicator = progressView
-            }
+            let progressView = HUDRoundProgressView()
+            bezelView.addSubview(progressView)
+            indicator = progressView
             
             if mode == .annularDeterminate,
                 let progressView = indicator as? HUDRoundProgressView {

@@ -12,6 +12,7 @@ import KProgressHUD
 class ViewController: UIViewController {
     
     enum ProgressMode {
+        case special
         case indeterminate, indeterminateLabel, indeterminateDetails
         case determinate, determinateAnnular, determinateBar
         case text, customView, actionButton, modeSwitching
@@ -19,6 +20,8 @@ class ViewController: UIViewController {
         
         var title: String {
             switch self {
+            case .special:
+                return "Special HUD"
             case .indeterminate:
                 return "Indeterminate mode"
             case .indeterminateLabel:
@@ -55,6 +58,7 @@ class ViewController: UIViewController {
     
     
     let examples: [[ProgressMode]] = [
+        [.special],
         [.indeterminate, .indeterminateLabel, .indeterminateDetails],
         [.determinate, .determinateAnnular, .determinateBar],
         [.text, .customView, .actionButton, .modeSwitching],
@@ -343,7 +347,15 @@ extension ViewController {
         let hud = KProgressHUD.showAdded(to: rootView, animated: true)
         hud.titleLabel.text = "Preparing..."
         
-        doSomeWorkWithProgress()
+        DispatchQueue.global(qos: .userInitiated).async {[weak self] in
+            guard let self = self else { return }
+            
+            self.doSomeWorkWithProgress()
+            DispatchQueue.main.async {
+                hud.hide(animated: true)
+            }
+        }
+        
     }
     
     func determinateProgressExample() {
@@ -444,6 +456,8 @@ extension ViewController: UITableViewDelegate {
         let example = examples[indexPath.section][indexPath.row]
         
         switch example {
+        case .special:
+            performSegue(withIdentifier: "special", sender: nil)
         case .indeterminate:
             indeterminateExample()
         case .indeterminateLabel:
