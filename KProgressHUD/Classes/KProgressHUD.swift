@@ -411,6 +411,10 @@ open class KProgressHUD: UIView {
             }
         }
     
+        if square {
+            bezelView.addConstraint(NSLayoutConstraint(item: bezelView, attribute: .width, relatedBy: .equal, toItem: bezelView, attribute: .height, multiplier: 1, constant: 0))
+        }
+        
         super.updateConstraints()
     }
     
