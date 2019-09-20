@@ -76,26 +76,68 @@ extension SpecialViewController: UITableViewDelegate {
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let example = examples[indexPath.row]
+        guard let rootView = navigationController?.view else { return }
         
+        let example = examples[indexPath.row]
         switch example {
         case .progress:
             print("Indeterminate mode")
-            view.showProgress()
+            rootView.showProgress()
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-                self.view.removeProgress()
+                rootView.removeProgress()
             }
         case .progressLabel:
             print("Indeterminate with label")
-            view.showProgress("Loading", delay: 2)
+            rootView.showProgress("Loading", delay: 2)
         case .shortText:
             print("Short text")
-            view.showLabel("short")
+            rootView.showLabel("short")
         case .longText:
-            view.showLabel("在各种沟通场合发现：行业专家在了解了我们“灵感库”在做的是什么后，对于这个名称都说不好或者感到奇怪，原因是“灵感库”会让他们浮想联翩，觉得里面会有很多教学活动的灵感，但是其实我们只提供了发布给家长的各种内容参考模板，他们觉得内容和名称很对应不上。")
+            rootView.showLabel("北京时间9月19日20点，华为Mate 30系列将会在德国慕尼黑举行发布会。在发布会前夕，关于华为Mate 30系列新机的信息有很多。而近日，就有人放出了华为Mate 30、Mate 30 Pro的配色渲染图。关于这次爆料的图片，华为Mate 30、Mate 30 Pro一共有四种配色，分别是紫色、黑色、翡翠以及星河银全新配色。")
             print("Long text")
         case .customView:
             print("Custom view")
+            
+            let contentView: UIView = {
+                let view = UIView()
+                view.backgroundColor = UIColor.white
+                view.layer.cornerRadius = 8
+                return view
+            }()
+            
+            let image = #imageLiteral(resourceName: "toast_successd")
+            let imageView = UIImageView(image: image)
+            let label: UILabel = {
+                let label = UILabel()
+                label.text = "Cheers!"
+                label.textColor = UIColor.black
+                label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+                return label
+            }()
+            
+            contentView.addSubview(imageView)
+            contentView.addSubview(label)
+            
+            var frame = contentView.bounds
+            frame.size.width = image.size.width + 49 * 2
+            contentView.bounds = frame
+            
+            imageView.snp.makeConstraints { (make) in
+                make.centerX.equalToSuperview()
+                make.top.equalToSuperview().offset(12)
+            }
+            label.snp.makeConstraints { (make) in
+                make.centerX.equalToSuperview()
+                make.top.equalTo(imageView.snp.bottom).offset(13)
+                make.bottom.equalToSuperview().offset(-20)
+            }
+            
+            print("contentView \(contentView.frame)")
+            rootView.showCustomView(contentView, delay: 1, backColor: UIColor.clear, completion: {
+                DispatchQueue.main.async {
+                    print("showCustomView succeed! \(contentView.frame)")
+                }
+            })
         }
     }
 }

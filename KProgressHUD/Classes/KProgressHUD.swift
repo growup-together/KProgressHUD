@@ -459,9 +459,7 @@ open class KProgressHUD: UIView {
             }
             
         case .customView:
-            guard
-                customView != indicator,
-                let customView = customView else { return }
+            guard let customView = customView else { return }
             indicator = customView
             bezelView.addSubview(customView)
             
@@ -495,10 +493,8 @@ open class KProgressHUD: UIView {
             indicatorView.progressColor = color
             indicatorView.lineColor = color
             
-        } else {
-            if indicator.responds(to: NSSelectorFromString("setTintColor:")) {
-                indicator.tintColor = color
-            }
+        } else if indicator.responds(to: NSSelectorFromString("setTintColor:")) {
+            indicator.tintColor = color
         }
         
     }

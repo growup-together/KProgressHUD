@@ -102,7 +102,7 @@ extension UIView {
                 hud.offset = CGPoint(x: 0.0, y: -50)
             }
         }
-        
+
         if mode == .text {
             hud.bezelView.snp.updateConstraints { (make) in
                 make.width.equalTo(self.bounds.width * (2.0 / 3.0)).priority(1000)
