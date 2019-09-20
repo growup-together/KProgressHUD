@@ -28,9 +28,6 @@ it, simply add the following line to your Podfile:
 pod 'KProgressHUD'
 ```
 
-## Author
-
-raniys, chengjia_liao@hotmail.com
 
 ## License
 
