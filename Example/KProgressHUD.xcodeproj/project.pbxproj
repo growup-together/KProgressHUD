@@ -50,6 +50,7 @@
 		83DD06B792961E281DBDFA05 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		84297B1223345FFE00BBAB81 /* MBProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgress.swift; sourceTree = "<group>"; };
 		84297B142334615900BBAB81 /* SpecialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewController.swift; sourceTree = "<group>"; };
+		84F69A612334B6DF00402BCC /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		FE50B6B42A5A9EC72A50B869 /* Pods-KProgressHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KProgressHUD_Tests.release.xcconfig"; path = "Target Support Files/Pods-KProgressHUD_Tests/Pods-KProgressHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +151,7 @@
 				15AC98D861F524E1652DC5F8 /* KProgressHUD.podspec */,
 				57EE43808048A0EDD3401E21 /* README.md */,
 				83DD06B792961E281DBDFA05 /* LICENSE */,
+				84F69A612334B6DF00402BCC /* .travis.yml */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
