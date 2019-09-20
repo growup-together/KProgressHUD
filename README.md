@@ -23,6 +23,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+`KProgressHUD` works on iOS 9.3+.
+
 ## Installation
 
 KProgressHUD is available through [CocoaPods](https://cocoapods.org). To install
