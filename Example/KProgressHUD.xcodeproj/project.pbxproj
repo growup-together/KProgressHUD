@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		03E9411F93ED6A2F1E1F963F /* Pods-KProgressHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KProgressHUD_Example.debug.xcconfig"; path = "Target Support Files/Pods-KProgressHUD_Example/Pods-KProgressHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		15AC98D861F524E1652DC5F8 /* KProgressHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KProgressHUD.podspec; path = ../KProgressHUD.podspec; sourceTree = "<group>"; };
+		15AC98D861F524E1652DC5F8 /* KProgressHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KProgressHUD.podspec; path = ../KProgressHUD.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		57EE43808048A0EDD3401E21 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		582119B373575D7BA7D3CDE3 /* Pods_KProgressHUD_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KProgressHUD_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E42846C54F7E58552578EF9 /* Pods_KProgressHUD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KProgressHUD_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,16 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KProgressHUD_Example/Pods-KProgressHUD_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KProgressHUD/KProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
