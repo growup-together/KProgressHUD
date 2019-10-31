@@ -7,7 +7,7 @@ DEPENDENCIES:
   - KProgressHUD (from `../`)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - SnapKit
 
 EXTERNAL SOURCES:

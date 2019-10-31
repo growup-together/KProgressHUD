@@ -1,6 +1,6 @@
 # KProgressHUD
 
-[![CI Status](https://img.shields.io/travis/raniys/KProgressHUD.svg?style=flat)](https://travis-ci.org/raniys/KProgressHUD)
+[![CI Status](https://img.shields.io/travis/growup-together/KProgressHUD.svg?style=flat)](https://travis-ci.org/growup-together/KProgressHUD)
 [![Version](https://img.shields.io/cocoapods/v/KProgressHUD.svg?style=flat)](https://cocoapods.org/pods/KProgressHUD)
 [![License](https://img.shields.io/cocoapods/l/KProgressHUD.svg?style=flat)](https://cocoapods.org/pods/KProgressHUD)
 [![Platform](https://img.shields.io/cocoapods/p/KProgressHUD.svg?style=flat)](https://cocoapods.org/pods/KProgressHUD)
@@ -26,7 +26,6 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 - iOS 10.0+
 - Xcode 11.0+
 - Swift 5.0+
-
 
 ## Installation
 
